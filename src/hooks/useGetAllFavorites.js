@@ -3,7 +3,6 @@ import {WEATHER_KEY} from "../constants/constants";
 
 function useGetAllFavorites(favorites){
     const [favoritesWeather,setFavoritesWeather] = useState([]);
-    const favoriteesKeys=favorites.map(e=>e.key);
     useEffect(()=>{
         const promiseArr=[];
         for(let f in favorites){

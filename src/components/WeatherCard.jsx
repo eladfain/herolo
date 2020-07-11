@@ -16,7 +16,7 @@ const WaetherCard=({title,degrees,icon,titleFunc})=>{
         <CardWrapper>
             <p>{cardTitle}</p>
             <p>{degrees}</p>
-            <img src={icon}/>
+            <img src={icon} alt=""/>
         </CardWrapper>
     )
 }

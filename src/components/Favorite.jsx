@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import {connect} from 'react-redux';
-import useOneDayWeather from "../hooks/useOneDayWeather";
 import {getDegrees,getIconUrl} from "../util/util";
 import FavoriteCard from "./FavoriteCard";
 import useGetAllFavorites from "../hooks/useGetAllFavorites";
@@ -14,7 +13,6 @@ justify-content:center;
 margin:20px;
 `
 const Favorite=({favorites})=>{
-    const favoriteesKeys=favorites.map(e=>e.key);
     
     const favoritesWeather=useGetAllFavorites(favorites);
     return(

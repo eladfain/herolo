@@ -13,7 +13,7 @@ const weather=createSlice({
             state.favorites.push(action.payload);
         },
         removeFavorite:(state,action)=>{
-            let newFavorite=state.favorites.filter(e=>e.key!=action.payload);
+            let newFavorite=state.favorites.filter(e=>e.key!==action.payload);
             state.favorites=newFavorite;
         },
         setCurrent:(state,action)=>{

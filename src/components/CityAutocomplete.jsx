@@ -10,7 +10,7 @@ const CityAutocomplete=({term,setTerm,setCurrent})=>{
         setTerm(e.target.value);
     }
     const autocompleteSubmit=(event,value)=>{
-        let newCity=autocompleteOptions.filter(v=>v.LocalizedName==value);
+        let newCity=autocompleteOptions.filter(v=>v.LocalizedName===value);
         if(newCity.length){
             let newCurrent={key:newCity[0]["Key"],name:value};
             setCurrent(newCurrent);
