@@ -9,7 +9,6 @@ import useFiveDayWeather from "../hooks/useFiveDayWeather";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { IconButton } from '@material-ui/core';
-import {ICON_URL} from "../constants/constants";
 import WaetherCard from "./WeatherCard";
 import {getDegrees,getIconUrl,getFutureDegrees} from "../util/util";
 import ErrorBoundary from "./ErrorBoundary";
