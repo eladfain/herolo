@@ -1,6 +1,5 @@
-import React from 'react'
-import { useEffect } from 'react';
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 import {connect} from 'react-redux';
 import weather from "../store/weatherSlice";
