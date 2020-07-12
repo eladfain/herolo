@@ -39,13 +39,13 @@ const LikeButtonWrapper=styled.div`
 `
 const WeatherReport=({current,favorites,addFavorite,removeFavorite,setLocation,location,setCurrent})=>{
     
-    useEffect(()=>{
+  //  useEffect(()=>{
         getLocation((position)=>{
             let lat=position.coords.latitude;
             let lon=position.coords.longitude;
             setLocation({lat:lat,lon:lon});
         });
-    },[]);
+  //  },[]);
     let geoCurrent=useGetLocation(location.lat,location.lon)
     let currentToUse=current;
     if(typeof currentToUse.key ==="undefined"){

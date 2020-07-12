@@ -21,7 +21,7 @@ export function getIconUrl(el){
     if(icon<10){
         icon="0"+icon;
     }
-   let iconUrl=ICON_URL.replace("${icon}",icon);
+   let iconUrl=ICON_URL.replace("icon",icon);
    return iconUrl;
 }
 
