@@ -24,8 +24,11 @@ jobs:
       run: |
         npm install
         npm run build --if-present
+        env:
+          CI: ""
         npm run test --if-present
-
+        
+          
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
       with:
@@ -33,3 +36,4 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_fda5482f1e5a4c6b8498955864cc5af8 }}
         package: .
+      
