@@ -4,7 +4,7 @@ function useFiveDayWeather(key){
     const [weather,setWeather] =useState({});
     useEffect(()=>{
             if(typeof key!=="undefined"){
-                let fetchUrl=`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=${WEATHER_KEY}&metric=true`;
+                let fetchUrl=`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=${WEATHER_KEY}&metric=true`;
                 fetch(fetchUrl).then(r=>r.json()).then(data=>setWeather(data));
             }
        

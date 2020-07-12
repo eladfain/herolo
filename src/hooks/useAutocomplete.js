@@ -5,7 +5,7 @@ function useAutocomplete(term){
     useEffect(()=>{
       
         if(term.length){
-            let fetchUrl=`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${WEATHER_KEY}&q=${term}`;
+            let fetchUrl=`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${WEATHER_KEY}&q=${term}`;
             fetch(fetchUrl).then(r=>r.json()).then(data=>setCitys(data));
         }
            

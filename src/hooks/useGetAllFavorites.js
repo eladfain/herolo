@@ -9,7 +9,7 @@ function useGetAllFavorites(favorites){
             ((favorite)=>{
                 
                 let key = favorites[favorite].key;
-                let fetchUrl=`http://dataservice.accuweather.com/currentconditions/v1/${key}?apikey=${WEATHER_KEY}` ; 
+                let fetchUrl=`https://dataservice.accuweather.com/currentconditions/v1/${key}?apikey=${WEATHER_KEY}` ; 
                 promiseArr.push(
                     fetch(fetchUrl).then(r=>r.json())
                 )
